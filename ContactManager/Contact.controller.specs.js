@@ -58,7 +58,7 @@ describe('error', function () {
         };
         expectedResult = req.body
     });
-    it('should return 404 for non-existing vehicle id', function () {
+    it('should return 404 for non-existing  id', function () {
         sinon.stub(Contact,'findById').yields(null, null);
         Controller.get(req, res);
         sinon.assert.calledWith(Contact.findById, req.params.id);
